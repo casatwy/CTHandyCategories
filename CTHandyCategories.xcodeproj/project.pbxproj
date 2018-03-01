@@ -13,6 +13,7 @@
 		4AD1C0B12047E0DC00547CCB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4AD1C0B02047E0DC00547CCB /* Assets.xcassets */; };
 		4AD1C0B42047E0DC00547CCB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AD1C0B22047E0DC00547CCB /* LaunchScreen.storyboard */; };
 		4AD1C0B72047E0DC00547CCB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AD1C0B62047E0DC00547CCB /* main.m */; };
+		4AD1C0C22047E20100547CCB /* NSObject+CTNavigation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AD1C0C12047E20100547CCB /* NSObject+CTNavigation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		4AD1C0B32047E0DC00547CCB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4AD1C0B52047E0DC00547CCB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4AD1C0B62047E0DC00547CCB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		4AD1C0C02047E20100547CCB /* NSObject+CTNavigation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+CTNavigation.h"; sourceTree = "<group>"; };
+		4AD1C0C12047E20100547CCB /* NSObject+CTNavigation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+CTNavigation.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +61,7 @@
 		4AD1C0A62047E0DC00547CCB /* CTHandyCategories */ = {
 			isa = PBXGroup;
 			children = (
+				4AD1C0BD2047E1BB00547CCB /* CTHandyCategories */,
 				4AD1C0A72047E0DC00547CCB /* AppDelegate.h */,
 				4AD1C0A82047E0DC00547CCB /* AppDelegate.m */,
 				4AD1C0AA2047E0DC00547CCB /* ViewController.h */,
@@ -69,6 +73,31 @@
 				4AD1C0B62047E0DC00547CCB /* main.m */,
 			);
 			path = CTHandyCategories;
+			sourceTree = "<group>";
+		};
+		4AD1C0BD2047E1BB00547CCB /* CTHandyCategories */ = {
+			isa = PBXGroup;
+			children = (
+				4AD1C0BE2047E1DB00547CCB /* NSObject */,
+			);
+			path = CTHandyCategories;
+			sourceTree = "<group>";
+		};
+		4AD1C0BE2047E1DB00547CCB /* NSObject */ = {
+			isa = PBXGroup;
+			children = (
+				4AD1C0BF2047E1DB00547CCB /* CTNavigation */,
+			);
+			path = NSObject;
+			sourceTree = "<group>";
+		};
+		4AD1C0BF2047E1DB00547CCB /* CTNavigation */ = {
+			isa = PBXGroup;
+			children = (
+				4AD1C0C02047E20100547CCB /* NSObject+CTNavigation.h */,
+				4AD1C0C12047E20100547CCB /* NSObject+CTNavigation.m */,
+			);
+			path = CTNavigation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -142,6 +171,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4AD1C0C22047E20100547CCB /* NSObject+CTNavigation.m in Sources */,
 				4AD1C0AC2047E0DC00547CCB /* ViewController.m in Sources */,
 				4AD1C0B72047E0DC00547CCB /* main.m in Sources */,
 				4AD1C0A92047E0DC00547CCB /* AppDelegate.m in Sources */,

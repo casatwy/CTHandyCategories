@@ -1,0 +1,7 @@
+CTHandyCategories.xcodeproj/xcuserdata/
+CTHandyCategories.xcworkspace/
+Pods/
+*.swp
+.DS_Store
+CTHandyCategories.xcodeproj/project.xcworkspace/xcuserdata/
+Podfile.lock
