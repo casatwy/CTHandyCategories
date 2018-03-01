@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18D5A0E7CEA0CCAEA0D5C3EF /* libPods-CTHandyCategories.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CB032522ADE9FFA21152885 /* libPods-CTHandyCategories.a */; };
 		4AD1C0A92047E0DC00547CCB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AD1C0A82047E0DC00547CCB /* AppDelegate.m */; };
 		4AD1C0AC2047E0DC00547CCB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AD1C0AB2047E0DC00547CCB /* ViewController.m */; };
 		4AD1C0AF2047E0DC00547CCB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AD1C0AD2047E0DC00547CCB /* Main.storyboard */; };
@@ -29,6 +30,9 @@
 		4AD1C0B62047E0DC00547CCB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4AD1C0C02047E20100547CCB /* NSObject+CTNavigation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+CTNavigation.h"; sourceTree = "<group>"; };
 		4AD1C0C12047E20100547CCB /* NSObject+CTNavigation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+CTNavigation.m"; sourceTree = "<group>"; };
+		6CB032522ADE9FFA21152885 /* libPods-CTHandyCategories.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CTHandyCategories.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		94C77EFD871AA7875A74C965 /* Pods-CTHandyCategories.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CTHandyCategories.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CTHandyCategories/Pods-CTHandyCategories.debug.xcconfig"; sourceTree = "<group>"; };
+		9DCBF8255043CC6EE1E8E560 /* Pods-CTHandyCategories.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CTHandyCategories.release.xcconfig"; path = "Pods/Target Support Files/Pods-CTHandyCategories/Pods-CTHandyCategories.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18D5A0E7CEA0CCAEA0D5C3EF /* libPods-CTHandyCategories.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -47,6 +52,8 @@
 			children = (
 				4AD1C0A62047E0DC00547CCB /* CTHandyCategories */,
 				4AD1C0A52047E0DC00547CCB /* Products */,
+				EB5D24080F1C407299219A5E /* Pods */,
+				A5C59002814A861952A0E5DC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -100,6 +107,23 @@
 			path = CTNavigation;
 			sourceTree = "<group>";
 		};
+		A5C59002814A861952A0E5DC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6CB032522ADE9FFA21152885 /* libPods-CTHandyCategories.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EB5D24080F1C407299219A5E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				94C77EFD871AA7875A74C965 /* Pods-CTHandyCategories.debug.xcconfig */,
+				9DCBF8255043CC6EE1E8E560 /* Pods-CTHandyCategories.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -107,9 +131,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4AD1C0BA2047E0DC00547CCB /* Build configuration list for PBXNativeTarget "CTHandyCategories" */;
 			buildPhases = (
+				80C8DEEBD9E22189AD3F5B36 /* [CP] Check Pods Manifest.lock */,
 				4AD1C0A02047E0DC00547CCB /* Sources */,
 				4AD1C0A12047E0DC00547CCB /* Frameworks */,
 				4AD1C0A22047E0DC00547CCB /* Resources */,
+				3639CEE27A3A1DE55F74D9C4 /* [CP] Embed Pods Frameworks */,
+				C8C8231DA2BC5A2672F10A46 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -165,6 +192,57 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3639CEE27A3A1DE55F74D9C4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CTHandyCategories/Pods-CTHandyCategories-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		80C8DEEBD9E22189AD3F5B36 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CTHandyCategories-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C8C8231DA2BC5A2672F10A46 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CTHandyCategories/Pods-CTHandyCategories-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4AD1C0A02047E0DC00547CCB /* Sources */ = {
@@ -306,6 +384,7 @@
 		};
 		4AD1C0BB2047E0DC00547CCB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 94C77EFD871AA7875A74C965 /* Pods-CTHandyCategories.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -319,6 +398,7 @@
 		};
 		4AD1C0BC2047E0DC00547CCB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9DCBF8255043CC6EE1E8E560 /* Pods-CTHandyCategories.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
