@@ -11,7 +11,7 @@
 
 @implementation NSString (CTHash)
 
-- (NSString *)ct_MD5
+- (NSString *)ct_MD5String
 {
     NSData* inputData = [self dataUsingEncoding:NSUTF8StringEncoding];
     unsigned char outputData[CC_MD5_DIGEST_LENGTH];
@@ -23,6 +23,15 @@
         [hashStr appendFormat:@"%02x", outputData[i]];
     
     return hashStr;
+}
+
+- (NSData *)ct_MD5
+{
+    NSData *inputData = [self dataUsingEncoding:NSUTF8StringEncoding];
+    unsigned char outputData[CC_MD5_DIGEST_LENGTH];
+    CC_MD5([inputData bytes], (unsigned int)[inputData length], outputData);
+    NSData *result = [NSData dataWithBytes:outputData length:CC_MD5_DIGEST_LENGTH];
+    return result;
 }
 
 @end

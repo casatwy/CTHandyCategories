@@ -10,6 +10,7 @@
 
 @interface NSString (CTHash)
 
-- (NSString *)ct_MD5;
+- (NSData *)ct_MD5;
+- (NSString *)ct_MD5String;
 
 @end
