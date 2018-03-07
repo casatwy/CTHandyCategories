@@ -15,6 +15,8 @@
 		4AD1C0B42047E0DC00547CCB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AD1C0B22047E0DC00547CCB /* LaunchScreen.storyboard */; };
 		4AD1C0B72047E0DC00547CCB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AD1C0B62047E0DC00547CCB /* main.m */; };
 		4AD1C0C22047E20100547CCB /* NSObject+CTNavigation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AD1C0C12047E20100547CCB /* NSObject+CTNavigation.m */; };
+		4ADD50DA205040BD007B6581 /* NSString+CTHash.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ADD50D9205040BD007B6581 /* NSString+CTHash.m */; };
+		4ADD50DF205040DB007B6581 /* NSData+CTHash.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ADD50DE205040DB007B6581 /* NSData+CTHash.m */; };
 		4AFF6791204FB88000791FB0 /* NSString+CTHeight.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AFF6790204FB88000791FB0 /* NSString+CTHeight.m */; };
 		4AFF67C7204FD50C00791FB0 /* NSObject+CTBundle.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AFF67C6204FD50C00791FB0 /* NSObject+CTBundle.m */; };
 /* End PBXBuildFile section */
@@ -32,6 +34,10 @@
 		4AD1C0B62047E0DC00547CCB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4AD1C0C02047E20100547CCB /* NSObject+CTNavigation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+CTNavigation.h"; sourceTree = "<group>"; };
 		4AD1C0C12047E20100547CCB /* NSObject+CTNavigation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+CTNavigation.m"; sourceTree = "<group>"; };
+		4ADD50D8205040BD007B6581 /* NSString+CTHash.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+CTHash.h"; sourceTree = "<group>"; };
+		4ADD50D9205040BD007B6581 /* NSString+CTHash.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+CTHash.m"; sourceTree = "<group>"; };
+		4ADD50DD205040DB007B6581 /* NSData+CTHash.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSData+CTHash.h"; sourceTree = "<group>"; };
+		4ADD50DE205040DB007B6581 /* NSData+CTHash.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSData+CTHash.m"; sourceTree = "<group>"; };
 		4AFF678F204FB88000791FB0 /* NSString+CTHeight.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+CTHeight.h"; sourceTree = "<group>"; };
 		4AFF6790204FB88000791FB0 /* NSString+CTHeight.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+CTHeight.m"; sourceTree = "<group>"; };
 		4AFF67C5204FD50C00791FB0 /* NSObject+CTBundle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+CTBundle.h"; sourceTree = "<group>"; };
@@ -91,6 +97,7 @@
 		4AD1C0BD2047E1BB00547CCB /* CTHandyCategories */ = {
 			isa = PBXGroup;
 			children = (
+				4ADD50DB205040CE007B6581 /* NSData */,
 				4AFF678D204FB86D00791FB0 /* NSString */,
 				4AD1C0BE2047E1DB00547CCB /* NSObject */,
 			);
@@ -115,9 +122,36 @@
 			path = CTNavigation;
 			sourceTree = "<group>";
 		};
+		4ADD50D7205040A6007B6581 /* CTHash */ = {
+			isa = PBXGroup;
+			children = (
+				4ADD50D8205040BD007B6581 /* NSString+CTHash.h */,
+				4ADD50D9205040BD007B6581 /* NSString+CTHash.m */,
+			);
+			path = CTHash;
+			sourceTree = "<group>";
+		};
+		4ADD50DB205040CE007B6581 /* NSData */ = {
+			isa = PBXGroup;
+			children = (
+				4ADD50DC205040CE007B6581 /* CTHash */,
+			);
+			path = NSData;
+			sourceTree = "<group>";
+		};
+		4ADD50DC205040CE007B6581 /* CTHash */ = {
+			isa = PBXGroup;
+			children = (
+				4ADD50DD205040DB007B6581 /* NSData+CTHash.h */,
+				4ADD50DE205040DB007B6581 /* NSData+CTHash.m */,
+			);
+			path = CTHash;
+			sourceTree = "<group>";
+		};
 		4AFF678D204FB86D00791FB0 /* NSString */ = {
 			isa = PBXGroup;
 			children = (
+				4ADD50D7205040A6007B6581 /* CTHash */,
 				4AFF678E204FB86D00791FB0 /* CTHeight */,
 			);
 			path = NSString;
@@ -283,8 +317,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4ADD50DA205040BD007B6581 /* NSString+CTHash.m in Sources */,
 				4AFF67C7204FD50C00791FB0 /* NSObject+CTBundle.m in Sources */,
 				4AFF6791204FB88000791FB0 /* NSString+CTHeight.m in Sources */,
+				4ADD50DF205040DB007B6581 /* NSData+CTHash.m in Sources */,
 				4AD1C0C22047E20100547CCB /* NSObject+CTNavigation.m in Sources */,
 				4AD1C0AC2047E0DC00547CCB /* ViewController.m in Sources */,
 				4AD1C0B72047E0DC00547CCB /* main.m in Sources */,
