@@ -16,6 +16,7 @@
 		4AD1C0B72047E0DC00547CCB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AD1C0B62047E0DC00547CCB /* main.m */; };
 		4AD1C0C22047E20100547CCB /* NSObject+CTNavigation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AD1C0C12047E20100547CCB /* NSObject+CTNavigation.m */; };
 		4AFF6791204FB88000791FB0 /* NSString+CTHeight.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AFF6790204FB88000791FB0 /* NSString+CTHeight.m */; };
+		4AFF67C7204FD50C00791FB0 /* NSObject+CTBundle.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AFF67C6204FD50C00791FB0 /* NSObject+CTBundle.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,8 @@
 		4AD1C0C12047E20100547CCB /* NSObject+CTNavigation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+CTNavigation.m"; sourceTree = "<group>"; };
 		4AFF678F204FB88000791FB0 /* NSString+CTHeight.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+CTHeight.h"; sourceTree = "<group>"; };
 		4AFF6790204FB88000791FB0 /* NSString+CTHeight.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+CTHeight.m"; sourceTree = "<group>"; };
+		4AFF67C5204FD50C00791FB0 /* NSObject+CTBundle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+CTBundle.h"; sourceTree = "<group>"; };
+		4AFF67C6204FD50C00791FB0 /* NSObject+CTBundle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+CTBundle.m"; sourceTree = "<group>"; };
 		6CB032522ADE9FFA21152885 /* libPods-CTHandyCategories.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CTHandyCategories.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		94C77EFD871AA7875A74C965 /* Pods-CTHandyCategories.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CTHandyCategories.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CTHandyCategories/Pods-CTHandyCategories.debug.xcconfig"; sourceTree = "<group>"; };
 		9DCBF8255043CC6EE1E8E560 /* Pods-CTHandyCategories.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CTHandyCategories.release.xcconfig"; path = "Pods/Target Support Files/Pods-CTHandyCategories/Pods-CTHandyCategories.release.xcconfig"; sourceTree = "<group>"; };
@@ -97,6 +100,7 @@
 		4AD1C0BE2047E1DB00547CCB /* NSObject */ = {
 			isa = PBXGroup;
 			children = (
+				4AFF67C4204FD4EA00791FB0 /* CTBundle */,
 				4AD1C0BF2047E1DB00547CCB /* CTNavigation */,
 			);
 			path = NSObject;
@@ -126,6 +130,15 @@
 				4AFF6790204FB88000791FB0 /* NSString+CTHeight.m */,
 			);
 			path = CTHeight;
+			sourceTree = "<group>";
+		};
+		4AFF67C4204FD4EA00791FB0 /* CTBundle */ = {
+			isa = PBXGroup;
+			children = (
+				4AFF67C5204FD50C00791FB0 /* NSObject+CTBundle.h */,
+				4AFF67C6204FD50C00791FB0 /* NSObject+CTBundle.m */,
+			);
+			path = CTBundle;
 			sourceTree = "<group>";
 		};
 		A5C59002814A861952A0E5DC /* Frameworks */ = {
@@ -270,6 +283,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4AFF67C7204FD50C00791FB0 /* NSObject+CTBundle.m in Sources */,
 				4AFF6791204FB88000791FB0 /* NSString+CTHeight.m in Sources */,
 				4AD1C0C22047E20100547CCB /* NSObject+CTNavigation.m in Sources */,
 				4AD1C0AC2047E0DC00547CCB /* ViewController.m in Sources */,
