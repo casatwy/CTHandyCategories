@@ -8,10 +8,46 @@
 
 #import "NSObject+CTBundle.h"
 
+@interface CTBundleCache : NSObject
+
+@property (nonatomic, strong) NSCache *cache;
++ (instancetype)sharedInstance;
+
+@end
+
+@implementation CTBundleCache
+
++ (instancetype)sharedInstance
+{
+    static CTBundleCache *bundleCache = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        bundleCache = [[CTBundleCache alloc] init];
+    });
+    return bundleCache;
+}
+
+#pragma mark - getters and setters
+- (NSCache *)cache
+{
+    if (_cache == nil) {
+        _cache = [[NSCache alloc] init];
+        _cache.countLimit = 10;
+    }
+    return _cache;
+}
+
+@end
+
 @implementation NSObject (CTBundle)
 
 - (NSBundle *)ct_bundleWithName:(NSString *)bundleName shouldReturnMainBundleIfBundleNotFound:(BOOL)shouldReturnMainBundleIfBundleNotFound
 {
+    NSBundle *bundle = [[CTBundleCache sharedInstance].cache objectForKey:bundleName];
+    if (bundle != nil) {
+        return bundle;
+    }
+    
     NSString *bundlePath = [[NSBundle mainBundle] pathForResource:bundleName ofType:@"bundle"];
     if (!bundlePath) {
         bundlePath = [[NSBundle mainBundle] pathForResource:bundleName ofType:@"bundle" inDirectory:@"Frameworks"];
@@ -20,13 +56,19 @@
         bundlePath = [[NSBundle mainBundle] pathForResource:bundleName ofType:@"bundle" inDirectory:[NSString stringWithFormat:@"Frameworks/%@.framework", bundleName]];
     }
     
-    NSBundle *bundle = [NSBundle bundleWithPath:bundlePath];
+    bundle = [NSBundle bundleWithPath:bundlePath];
     
     if (shouldReturnMainBundleIfBundleNotFound == YES && bundle == nil) {
         bundle = [NSBundle mainBundle];
+    }
+    
+    if (bundle != nil) {
+        [[CTBundleCache sharedInstance].cache setObject:bundle forKey:bundleName];
     }
 
     return bundle;
 }
 
 @end
+
+
