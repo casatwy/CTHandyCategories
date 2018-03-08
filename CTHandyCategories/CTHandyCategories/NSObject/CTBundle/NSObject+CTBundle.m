@@ -10,7 +10,7 @@
 
 @implementation NSObject (CTBundle)
 
-- (NSBundle *)ct_bundleWithName:(NSString *)bundleName
+- (NSBundle *)ct_bundleWithName:(NSString *)bundleName shouldReturnMainBundleIfBundleNotFound:(BOOL)shouldReturnMainBundleIfBundleNotFound
 {
     NSString *bundlePath = [[NSBundle mainBundle] pathForResource:bundleName ofType:@"bundle"];
     if (!bundlePath) {
@@ -19,10 +19,13 @@
     if (!bundlePath) {
         bundlePath = [[NSBundle mainBundle] pathForResource:bundleName ofType:@"bundle" inDirectory:[NSString stringWithFormat:@"Frameworks/%@.framework", bundleName]];
     }
+    
     NSBundle *bundle = [NSBundle bundleWithPath:bundlePath];
-    if (bundle == nil) {
+    
+    if (shouldReturnMainBundleIfBundleNotFound == YES && bundle == nil) {
         bundle = [NSBundle mainBundle];
     }
+
     return bundle;
 }
 

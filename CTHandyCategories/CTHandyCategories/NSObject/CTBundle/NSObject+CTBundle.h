@@ -10,6 +10,6 @@
 
 @interface NSObject (CTBundle)
 
-- (NSBundle *)ct_bundleWithName:(NSString *)bundleName;
+- (NSBundle *)ct_bundleWithName:(NSString *)bundleName shouldReturnMainBundleIfBundleNotFound:(BOOL)shouldReturnMainBundleIfBundleNotFound;
 
 @end
