@@ -19,7 +19,11 @@
     if (!bundlePath) {
         bundlePath = [[NSBundle mainBundle] pathForResource:bundleName ofType:@"bundle" inDirectory:[NSString stringWithFormat:@"Frameworks/%@.framework", bundleName]];
     }
-    return [NSBundle bundleWithPath:bundlePath];
+    NSBundle *bundle = [NSBundle bundleWithPath:bundlePath];
+    if (bundle == nil) {
+        bundle = [NSBundle mainBundle];
+    }
+    return bundle;
 }
 
 @end
