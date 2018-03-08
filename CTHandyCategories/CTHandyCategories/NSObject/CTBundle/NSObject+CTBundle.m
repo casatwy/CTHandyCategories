@@ -44,7 +44,11 @@
 - (NSBundle *)ct_bundleWithName:(NSString *)bundleName shouldReturnMainBundleIfBundleNotFound:(BOOL)shouldReturnMainBundleIfBundleNotFound
 {
     NSBundle *bundle = [[CTBundleCache sharedInstance].cache objectForKey:bundleName];
-    if (bundle != nil) {
+    if ([bundle isKindOfClass:[NSNumber class]]) {
+        // NSNotFound
+        return nil;
+    }
+    if (bundle != nil && [bundle isKindOfClass:[NSBundle class]]) {
         return bundle;
     }
     
@@ -64,6 +68,8 @@
     
     if (bundle != nil) {
         [[CTBundleCache sharedInstance].cache setObject:bundle forKey:bundleName];
+    } else {
+        [[CTBundleCache sharedInstance].cache setObject:@(NSNotFound) forKey:bundleName];
     }
 
     return bundle;
