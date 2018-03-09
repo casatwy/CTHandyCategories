@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		18D5A0E7CEA0CCAEA0D5C3EF /* libPods-CTHandyCategories.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CB032522ADE9FFA21152885 /* libPods-CTHandyCategories.a */; };
+		4A71785B2052C5D900BA0AB9 /* NSString+CTDate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A71785A2052C5D900BA0AB9 /* NSString+CTDate.m */; };
+		4A7178602052C74E00BA0AB9 /* NSDate+CTString.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A71785F2052C74E00BA0AB9 /* NSDate+CTString.m */; };
 		4AD1C0A92047E0DC00547CCB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AD1C0A82047E0DC00547CCB /* AppDelegate.m */; };
 		4AD1C0AC2047E0DC00547CCB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AD1C0AB2047E0DC00547CCB /* ViewController.m */; };
 		4AD1C0AF2047E0DC00547CCB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AD1C0AD2047E0DC00547CCB /* Main.storyboard */; };
@@ -23,6 +25,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4A7178592052C5D900BA0AB9 /* NSString+CTDate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+CTDate.h"; sourceTree = "<group>"; };
+		4A71785A2052C5D900BA0AB9 /* NSString+CTDate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+CTDate.m"; sourceTree = "<group>"; };
+		4A71785E2052C74E00BA0AB9 /* NSDate+CTString.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDate+CTString.h"; sourceTree = "<group>"; };
+		4A71785F2052C74E00BA0AB9 /* NSDate+CTString.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDate+CTString.m"; sourceTree = "<group>"; };
 		4AD1C0A42047E0DC00547CCB /* CTHandyCategories.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CTHandyCategories.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AD1C0A72047E0DC00547CCB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4AD1C0A82047E0DC00547CCB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -62,6 +68,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4A7178582052C5C600BA0AB9 /* CTDate */ = {
+			isa = PBXGroup;
+			children = (
+				4A7178592052C5D900BA0AB9 /* NSString+CTDate.h */,
+				4A71785A2052C5D900BA0AB9 /* NSString+CTDate.m */,
+			);
+			path = CTDate;
+			sourceTree = "<group>";
+		};
+		4A71785C2052C73D00BA0AB9 /* NSDate */ = {
+			isa = PBXGroup;
+			children = (
+				4A71785D2052C73D00BA0AB9 /* CTString */,
+			);
+			path = NSDate;
+			sourceTree = "<group>";
+		};
+		4A71785D2052C73D00BA0AB9 /* CTString */ = {
+			isa = PBXGroup;
+			children = (
+				4A71785E2052C74E00BA0AB9 /* NSDate+CTString.h */,
+				4A71785F2052C74E00BA0AB9 /* NSDate+CTString.m */,
+			);
+			path = CTString;
+			sourceTree = "<group>";
+		};
 		4AD1C09B2047E0DC00547CCB = {
 			isa = PBXGroup;
 			children = (
@@ -100,6 +132,7 @@
 		4AD1C0BD2047E1BB00547CCB /* CTHandyCategories */ = {
 			isa = PBXGroup;
 			children = (
+				4A71785C2052C73D00BA0AB9 /* NSDate */,
 				4ADD50DB205040CE007B6581 /* NSData */,
 				4AFF678D204FB86D00791FB0 /* NSString */,
 				4AD1C0BE2047E1DB00547CCB /* NSObject */,
@@ -164,6 +197,7 @@
 		4AFF678D204FB86D00791FB0 /* NSString */ = {
 			isa = PBXGroup;
 			children = (
+				4A7178582052C5C600BA0AB9 /* CTDate */,
 				4ADD50D7205040A6007B6581 /* CTHash */,
 				4AFF678E204FB86D00791FB0 /* CTHeight */,
 			);
@@ -336,7 +370,9 @@
 				4ADD50DF205040DB007B6581 /* NSData+CTHash.m in Sources */,
 				4AD1C0C22047E20100547CCB /* NSObject+CTNavigation.m in Sources */,
 				4AD1C0AC2047E0DC00547CCB /* ViewController.m in Sources */,
+				4A71785B2052C5D900BA0AB9 /* NSString+CTDate.m in Sources */,
 				4AD1C0B72047E0DC00547CCB /* main.m in Sources */,
+				4A7178602052C74E00BA0AB9 /* NSDate+CTString.m in Sources */,
 				4AEA0E29205048EF007581DC /* NSObject+CTAlert.m in Sources */,
 				4AD1C0A92047E0DC00547CCB /* AppDelegate.m in Sources */,
 			);
