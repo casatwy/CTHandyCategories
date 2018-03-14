@@ -21,7 +21,7 @@
 
 @implementation NSObject (CTIP)
 
-- (NSString *)ipAddressWithShouldPreferIPv4:(BOOL)preferIPv4
+- (NSString *)ct_ipAddressWithShouldPreferIPv4:(BOOL)preferIPv4
 {
 #if DEBUG
     NSArray *searchArray = preferIPv4 ?
