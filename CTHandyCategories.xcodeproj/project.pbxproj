@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		18D5A0E7CEA0CCAEA0D5C3EF /* libPods-CTHandyCategories.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CB032522ADE9FFA21152885 /* libPods-CTHandyCategories.a */; };
+		4A6BF32F2058D06300EAB165 /* NSString+CTURL.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A6BF32E2058D06300EAB165 /* NSString+CTURL.m */; };
 		4AD1C0A92047E0DC00547CCB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AD1C0A82047E0DC00547CCB /* AppDelegate.m */; };
 		4AD1C0AC2047E0DC00547CCB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AD1C0AB2047E0DC00547CCB /* ViewController.m */; };
 		4AD1C0AF2047E0DC00547CCB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AD1C0AD2047E0DC00547CCB /* Main.storyboard */; };
@@ -20,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4A6BF32D2058D06300EAB165 /* NSString+CTURL.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+CTURL.h"; sourceTree = "<group>"; };
+		4A6BF32E2058D06300EAB165 /* NSString+CTURL.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+CTURL.m"; sourceTree = "<group>"; };
 		4AD1C0A42047E0DC00547CCB /* CTHandyCategories.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CTHandyCategories.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AD1C0A72047E0DC00547CCB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4AD1C0A82047E0DC00547CCB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -53,6 +56,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4A6BF32C2058D05200EAB165 /* CTURL */ = {
+			isa = PBXGroup;
+			children = (
+				4A6BF32D2058D06300EAB165 /* NSString+CTURL.h */,
+				4A6BF32E2058D06300EAB165 /* NSString+CTURL.m */,
+			);
+			path = CTURL;
+			sourceTree = "<group>";
+		};
 		4AD1C09B2047E0DC00547CCB = {
 			isa = PBXGroup;
 			children = (
@@ -118,6 +130,7 @@
 		4AFF678D204FB86D00791FB0 /* NSString */ = {
 			isa = PBXGroup;
 			children = (
+				4A6BF32C2058D05200EAB165 /* CTURL */,
 				4AFF678E204FB86D00791FB0 /* CTHeight */,
 			);
 			path = NSString;
@@ -284,6 +297,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4AFF67C7204FD50C00791FB0 /* NSObject+CTBundle.m in Sources */,
+				4A6BF32F2058D06300EAB165 /* NSString+CTURL.m in Sources */,
 				4AFF6791204FB88000791FB0 /* NSString+CTHeight.m in Sources */,
 				4AD1C0C22047E20100547CCB /* NSObject+CTNavigation.m in Sources */,
 				4AD1C0AC2047E0DC00547CCB /* ViewController.m in Sources */,
