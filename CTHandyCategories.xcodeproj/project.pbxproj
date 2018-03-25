@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		18D5A0E7CEA0CCAEA0D5C3EF /* libPods-CTHandyCategories.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CB032522ADE9FFA21152885 /* libPods-CTHandyCategories.a */; };
+		4A6BF32F2058D06300EAB165 /* NSString+CTURL.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A6BF32E2058D06300EAB165 /* NSString+CTURL.m */; };
+		4A6BF3372058DB3800EAB165 /* NSObject+CTIP.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A6BF3362058DB3800EAB165 /* NSObject+CTIP.m */; };
 		4A71785B2052C5D900BA0AB9 /* NSString+CTDate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A71785A2052C5D900BA0AB9 /* NSString+CTDate.m */; };
 		4A7178602052C74E00BA0AB9 /* NSDate+CTString.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A71785F2052C74E00BA0AB9 /* NSDate+CTString.m */; };
 		4AD1C0A92047E0DC00547CCB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AD1C0A82047E0DC00547CCB /* AppDelegate.m */; };
@@ -25,6 +27,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4A6BF32D2058D06300EAB165 /* NSString+CTURL.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+CTURL.h"; sourceTree = "<group>"; };
+		4A6BF32E2058D06300EAB165 /* NSString+CTURL.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+CTURL.m"; sourceTree = "<group>"; };
+		4A6BF3352058DB3800EAB165 /* NSObject+CTIP.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+CTIP.h"; sourceTree = "<group>"; };
+		4A6BF3362058DB3800EAB165 /* NSObject+CTIP.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+CTIP.m"; sourceTree = "<group>"; };
 		4A7178592052C5D900BA0AB9 /* NSString+CTDate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+CTDate.h"; sourceTree = "<group>"; };
 		4A71785A2052C5D900BA0AB9 /* NSString+CTDate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+CTDate.m"; sourceTree = "<group>"; };
 		4A71785E2052C74E00BA0AB9 /* NSDate+CTString.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDate+CTString.h"; sourceTree = "<group>"; };
@@ -68,6 +74,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4A6BF32C2058D05200EAB165 /* CTURL */ = {
+			isa = PBXGroup;
+			children = (
+				4A6BF32D2058D06300EAB165 /* NSString+CTURL.h */,
+				4A6BF32E2058D06300EAB165 /* NSString+CTURL.m */,
+			);
+			path = CTURL;
+			sourceTree = "<group>";
+		};
+		4A6BF3342058DB2900EAB165 /* CTIP */ = {
+			isa = PBXGroup;
+			children = (
+				4A6BF3352058DB3800EAB165 /* NSObject+CTIP.h */,
+				4A6BF3362058DB3800EAB165 /* NSObject+CTIP.m */,
+			);
+			path = CTIP;
+			sourceTree = "<group>";
+		};
 		4A7178582052C5C600BA0AB9 /* CTDate */ = {
 			isa = PBXGroup;
 			children = (
@@ -143,6 +167,7 @@
 		4AD1C0BE2047E1DB00547CCB /* NSObject */ = {
 			isa = PBXGroup;
 			children = (
+				4A6BF3342058DB2900EAB165 /* CTIP */,
 				4AEA0E26205048DA007581DC /* CTAlert */,
 				4AFF67C4204FD4EA00791FB0 /* CTBundle */,
 				4AD1C0BF2047E1DB00547CCB /* CTNavigation */,
@@ -197,6 +222,7 @@
 		4AFF678D204FB86D00791FB0 /* NSString */ = {
 			isa = PBXGroup;
 			children = (
+				4A6BF32C2058D05200EAB165 /* CTURL */,
 				4A7178582052C5C600BA0AB9 /* CTDate */,
 				4ADD50D7205040A6007B6581 /* CTHash */,
 				4AFF678E204FB86D00791FB0 /* CTHeight */,
@@ -365,7 +391,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				4ADD50DA205040BD007B6581 /* NSString+CTHash.m in Sources */,
+				4A6BF3372058DB3800EAB165 /* NSObject+CTIP.m in Sources */,
 				4AFF67C7204FD50C00791FB0 /* NSObject+CTBundle.m in Sources */,
+				4A6BF32F2058D06300EAB165 /* NSString+CTURL.m in Sources */,
 				4AFF6791204FB88000791FB0 /* NSString+CTHeight.m in Sources */,
 				4ADD50DF205040DB007B6581 /* NSData+CTHash.m in Sources */,
 				4AD1C0C22047E20100547CCB /* NSObject+CTNavigation.m in Sources */,
