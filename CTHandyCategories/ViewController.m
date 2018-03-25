@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "NSObject+CTAlert.h"
 
 @interface ViewController ()
 
@@ -16,14 +17,22 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    self.view.backgroundColor = [UIColor whiteColor];
 }
 
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    [self ct_showAlertInputWithTitle:@"test"
+                             message:@"input"
+                     placeholderList:@[@"inputA", @"inputB"]
+                         actionTitle:@"OK"
+                             handler:^(UIAlertAction *action, UIAlertController *alertController) {
+                                 [alertController.textFields enumerateObjectsUsingBlock:^(UITextField * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+                                     NSLog(@"%@", obj.text);
+                                 }];
+                             }
+                          completion:nil];
 }
-
 
 @end

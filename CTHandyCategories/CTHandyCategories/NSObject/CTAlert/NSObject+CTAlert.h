@@ -10,6 +10,17 @@
 
 @interface NSObject (CTAlert)
 
-- (void)ct_showAlertWithTitle:(NSString *)title message:(NSString *)message actionTitle:(NSString *)actionTitle handler:(void(^)(UIAlertAction * action))handler completion:(void (^)(void))completion;
+- (void)ct_showAlertWithTitle:(NSString *)title
+                      message:(NSString *)message
+                  actionTitle:(NSString *)actionTitle
+                      handler:(void(^)(UIAlertAction * action))handler
+                   completion:(void (^)(void))completion;
+
+- (void)ct_showAlertInputWithTitle:(NSString *)title
+                      message:(NSString *)message
+                   placeholderList:(NSArray <NSString *> *)placeholderList
+                       actionTitle:(NSString *)actionTitle
+                           handler:(void(^)(UIAlertAction * action, UIAlertController * alertController))handler
+                        completion:(void (^)(void))completion;
 
 @end
