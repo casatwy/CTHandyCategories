@@ -1,13 +1,13 @@
 #!/bin/bash
 
+git add .
+git commit -am modification
+git pull origin master --tags
+
 VersionString=`grep -E 's.version.*=' CTHandyCategories.podspec`
 VersionNumber=`tr -cd 0-9 <<<"$VersionString"`
 NewVersionNumber=$(($VersionNumber + 1))
 LineNumber=`grep -nE 's.version.*=' CTHandyCategories.podspec | cut -d : -f1`
-
-git add .
-git commit -am modification
-git pull origin master --tags
 
 sed -i "" "${LineNumber}s/${VersionNumber}/${NewVersionNumber}/g" CTHandyCategories.podspec
 
