@@ -12,8 +12,8 @@
 
 - (void)ct_showAlertWithTitle:(NSString *)title
                       message:(NSString *)message
-                  actionTitle:(NSString *)actionTitle
-                      handler:(void(^)(UIAlertAction * action))handler
+                  actionTitleList:(NSArray <NSString *> *)actionTitleList
+                      handler:(void(^)(UIAlertAction * action, NSUInteger index))handler
                    completion:(void (^)(void))completion;
 
 - (void)ct_showAlertInputWithTitle:(NSString *)title

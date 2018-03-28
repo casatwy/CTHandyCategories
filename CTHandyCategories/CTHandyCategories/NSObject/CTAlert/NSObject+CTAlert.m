@@ -14,17 +14,25 @@
 
 - (void)ct_showAlertWithTitle:(NSString *)title
                       message:(NSString *)message
-                  actionTitle:(NSString *)actionTitle
-                      handler:(void (^)(UIAlertAction *))handler
+              actionTitleList:(NSArray<NSString *> *)actionTitleList
+                      handler:(void (^)(UIAlertAction *, NSUInteger))handler
                    completion:(void (^)(void))completion
 {
     UIAlertController *alertController = [UIAlertController alertControllerWithTitle:title
                                                                              message:message
                                                                       preferredStyle:UIAlertControllerStyleAlert];
-    UIAlertAction *alertAction = [UIAlertAction actionWithTitle:actionTitle
-                                                          style:UIAlertActionStyleDefault
-                                                        handler:handler];
-    [alertController addAction:alertAction];
+    
+    [actionTitleList enumerateObjectsUsingBlock:^(NSString * _Nonnull actionTitle, NSUInteger idx, BOOL * _Nonnull stop) {
+        UIAlertAction *alertAction = [UIAlertAction actionWithTitle:actionTitle
+                                                              style:UIAlertActionStyleDefault
+                                                            handler:^(UIAlertAction * _Nonnull action) {
+                                                                if (handler) {
+                                                                    handler(action, idx);
+                                                                }
+                                                            }];
+        [alertController addAction:alertAction];
+    }];
+    
     [self ct_presentViewController:alertController animated:YES completion:completion];
 }
 
