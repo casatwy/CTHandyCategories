@@ -12,15 +12,15 @@
 
 - (void)ct_showAlertWithTitle:(NSString *)title
                       message:(NSString *)message
-                  actionTitleList:(NSArray <NSString *> *)actionTitleList
+              actionTitleList:(NSArray <NSString *> *)actionTitleList
                       handler:(void(^)(UIAlertAction * action, NSUInteger index))handler
                    completion:(void (^)(void))completion;
 
 - (void)ct_showAlertInputWithTitle:(NSString *)title
-                      message:(NSString *)message
+                           message:(NSString *)message
                    placeholderList:(NSArray <NSString *> *)placeholderList
-                       actionTitle:(NSString *)actionTitle
-                           handler:(void(^)(UIAlertAction * action, UIAlertController * alertController))handler
+                   actionTitleList:(NSArray <NSString *> *)actionTitleList
+                           handler:(void(^)(UIAlertAction * action, UIAlertController * alertController, NSUInteger index))handler
                         completion:(void (^)(void))completion;
 
 @end

@@ -37,28 +37,34 @@
 }
 
 - (void)ct_showAlertInputWithTitle:(NSString *)title
-                      message:(NSString *)message
+                           message:(NSString *)message
                    placeholderList:(NSArray<NSString *> *)placeholderList
-                       actionTitle:(NSString *)actionTitle
-                           handler:(void (^)(UIAlertAction *, UIAlertController *))handler
+                   actionTitleList:(NSArray <NSString *> *)actionTitleList
+                           handler:(void (^)(UIAlertAction *, UIAlertController *, NSUInteger))handler
                         completion:(void (^)(void))completion
 {
     UIAlertController *alertController = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
-    for (NSString *placeholder in placeholderList) {
+    
+    // add text field
+    [placeholderList enumerateObjectsUsingBlock:^(NSString * _Nonnull placeholder, NSUInteger idx, BOOL * _Nonnull stop) {
         [alertController addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
             textField.placeholder = placeholder;
             textField.clearButtonMode = UITextFieldViewModeWhileEditing;
         }];
-    }
-    UIAlertAction *action = [UIAlertAction actionWithTitle:actionTitle
-                                                          style:UIAlertActionStyleDefault
-                                                        handler:^(UIAlertAction * _Nonnull action) {
-                                                            if (handler) {
-                                                                handler(action, alertController);
-                                                            }
-                                                        }];
-    
-    [alertController addAction:action];
+    }];
+
+    // add action
+    [actionTitleList enumerateObjectsUsingBlock:^(NSString * _Nonnull actionTitle, NSUInteger idx, BOOL * _Nonnull stop) {
+        UIAlertAction *action = [UIAlertAction actionWithTitle:actionTitle
+                                                         style:UIAlertActionStyleDefault
+                                                       handler:^(UIAlertAction * _Nonnull action) {
+                                                           if (handler) {
+                                                               handler(action, alertController, idx);
+                                                           }
+                                                       }];
+        [alertController addAction:action];
+    }];
+
     [self ct_presentViewController:alertController animated:YES completion:completion];
 }
 
