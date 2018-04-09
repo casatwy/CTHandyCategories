@@ -21,6 +21,8 @@
 		4AD1C0C22047E20100547CCB /* NSObject+CTNavigation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AD1C0C12047E20100547CCB /* NSObject+CTNavigation.m */; };
 		4ADD50DA205040BD007B6581 /* NSString+CTHash.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ADD50D9205040BD007B6581 /* NSString+CTHash.m */; };
 		4ADD50DF205040DB007B6581 /* NSData+CTHash.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ADD50DE205040DB007B6581 /* NSData+CTHash.m */; };
+		4AE4C423207B47BF001DA415 /* MKMapView+Annotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AE4C422207B47BF001DA415 /* MKMapView+Annotation.m */; };
+		4AE4C428207B4FDA001DA415 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AE4C427207B4FDA001DA415 /* MapViewController.m */; };
 		4AEA0E29205048EF007581DC /* NSObject+CTAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AEA0E28205048EF007581DC /* NSObject+CTAlert.m */; };
 		4AFF6791204FB88000791FB0 /* NSString+CTHeight.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AFF6790204FB88000791FB0 /* NSString+CTHeight.m */; };
 		4AFF67C7204FD50C00791FB0 /* NSObject+CTBundle.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AFF67C6204FD50C00791FB0 /* NSObject+CTBundle.m */; };
@@ -51,6 +53,10 @@
 		4ADD50D9205040BD007B6581 /* NSString+CTHash.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+CTHash.m"; sourceTree = "<group>"; };
 		4ADD50DD205040DB007B6581 /* NSData+CTHash.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSData+CTHash.h"; sourceTree = "<group>"; };
 		4ADD50DE205040DB007B6581 /* NSData+CTHash.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSData+CTHash.m"; sourceTree = "<group>"; };
+		4AE4C421207B47BF001DA415 /* MKMapView+Annotation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MKMapView+Annotation.h"; sourceTree = "<group>"; };
+		4AE4C422207B47BF001DA415 /* MKMapView+Annotation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "MKMapView+Annotation.m"; sourceTree = "<group>"; };
+		4AE4C426207B4FDA001DA415 /* MapViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		4AE4C427207B4FDA001DA415 /* MapViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		4AEA0E27205048EF007581DC /* NSObject+CTAlert.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+CTAlert.h"; sourceTree = "<group>"; };
 		4AEA0E28205048EF007581DC /* NSObject+CTAlert.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+CTAlert.m"; sourceTree = "<group>"; };
 		4AFF678F204FB88000791FB0 /* NSString+CTHeight.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+CTHeight.h"; sourceTree = "<group>"; };
@@ -144,6 +150,7 @@
 				4AD1C0A82047E0DC00547CCB /* AppDelegate.m */,
 				4AD1C0AA2047E0DC00547CCB /* ViewController.h */,
 				4AD1C0AB2047E0DC00547CCB /* ViewController.m */,
+				4AE4C424207B4FC9001DA415 /* Demos */,
 				4AD1C0AD2047E0DC00547CCB /* Main.storyboard */,
 				4AD1C0B02047E0DC00547CCB /* Assets.xcassets */,
 				4AD1C0B22047E0DC00547CCB /* LaunchScreen.storyboard */,
@@ -156,6 +163,7 @@
 		4AD1C0BD2047E1BB00547CCB /* CTHandyCategories */ = {
 			isa = PBXGroup;
 			children = (
+				4AE4C41F207B47AA001DA415 /* MKMapView */,
 				4A71785C2052C73D00BA0AB9 /* NSDate */,
 				4ADD50DB205040CE007B6581 /* NSData */,
 				4AFF678D204FB86D00791FB0 /* NSString */,
@@ -208,6 +216,40 @@
 				4ADD50DE205040DB007B6581 /* NSData+CTHash.m */,
 			);
 			path = CTHash;
+			sourceTree = "<group>";
+		};
+		4AE4C41F207B47AA001DA415 /* MKMapView */ = {
+			isa = PBXGroup;
+			children = (
+				4AE4C420207B47AA001DA415 /* Annotation */,
+			);
+			path = MKMapView;
+			sourceTree = "<group>";
+		};
+		4AE4C420207B47AA001DA415 /* Annotation */ = {
+			isa = PBXGroup;
+			children = (
+				4AE4C421207B47BF001DA415 /* MKMapView+Annotation.h */,
+				4AE4C422207B47BF001DA415 /* MKMapView+Annotation.m */,
+			);
+			path = Annotation;
+			sourceTree = "<group>";
+		};
+		4AE4C424207B4FC9001DA415 /* Demos */ = {
+			isa = PBXGroup;
+			children = (
+				4AE4C425207B4FC9001DA415 /* Map */,
+			);
+			path = Demos;
+			sourceTree = "<group>";
+		};
+		4AE4C425207B4FC9001DA415 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				4AE4C426207B4FDA001DA415 /* MapViewController.h */,
+				4AE4C427207B4FDA001DA415 /* MapViewController.m */,
+			);
+			path = Map;
 			sourceTree = "<group>";
 		};
 		4AEA0E26205048DA007581DC /* CTAlert */ = {
@@ -276,8 +318,6 @@
 				4AD1C0A02047E0DC00547CCB /* Sources */,
 				4AD1C0A12047E0DC00547CCB /* Frameworks */,
 				4AD1C0A22047E0DC00547CCB /* Resources */,
-				3639CEE27A3A1DE55F74D9C4 /* [CP] Embed Pods Frameworks */,
-				C8C8231DA2BC5A2672F10A46 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -335,21 +375,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		3639CEE27A3A1DE55F74D9C4 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CTHandyCategories/Pods-CTHandyCategories-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		80C8DEEBD9E22189AD3F5B36 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -366,21 +391,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C8C8231DA2BC5A2672F10A46 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CTHandyCategories/Pods-CTHandyCategories-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -402,6 +412,8 @@
 				4AD1C0B72047E0DC00547CCB /* main.m in Sources */,
 				4A7178602052C74E00BA0AB9 /* NSDate+CTString.m in Sources */,
 				4AEA0E29205048EF007581DC /* NSObject+CTAlert.m in Sources */,
+				4AE4C428207B4FDA001DA415 /* MapViewController.m in Sources */,
+				4AE4C423207B47BF001DA415 /* MKMapView+Annotation.m in Sources */,
 				4AD1C0A92047E0DC00547CCB /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
