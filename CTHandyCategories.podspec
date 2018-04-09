@@ -118,7 +118,7 @@ Pod::Spec.new do |s|
   #
 
   # s.framework  = "SomeFramework"
-  # s.frameworks = "SomeFramework", "AnotherFramework"
+  s.frameworks = "MapKit", "CoreLocation"
 
   # s.library   = "iconv"
   # s.libraries = "iconv", "xml2"
@@ -134,6 +134,6 @@ Pod::Spec.new do |s|
 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   # s.dependency "CTMediator"
-  # s.dependency "HandyFrame"
+  s.dependency "HandyFrame"
 
 end
