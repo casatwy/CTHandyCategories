@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "CTHandyCategories"
-  s.version      = "20"
+  s.version      = "21"
   s.summary      = "CTHandyCategories."
 
   # This description is used to generate tags and improve search results.
