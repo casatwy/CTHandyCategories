@@ -20,4 +20,32 @@
     [self setCenterCoordinate:centerCoordinate animated:animated];
 }
 
+- (void)showRegionThatFitsAnnotations:(NSArray<id<MKAnnotation>> *)annotationList
+{
+    __block CGFloat minLat = CGFLOAT_MAX;
+    __block CGFloat maxLat = CGFLOAT_MIN;
+    __block CGFloat minLng = CGFLOAT_MAX;
+    __block CGFloat maxLng = CGFLOAT_MIN;
+    
+    [annotationList enumerateObjectsUsingBlock:^(id<MKAnnotation>  _Nonnull annotation, NSUInteger idx, BOOL * _Nonnull stop) {
+        if (annotation.coordinate.latitude > maxLat) {
+            maxLat = annotation.coordinate.latitude;
+        }
+        if (annotation.coordinate.latitude < minLat) {
+            minLat = annotation.coordinate.latitude;
+        }
+        if (annotation.coordinate.longitude > maxLng) {
+            maxLng = annotation.coordinate.longitude;
+        }
+        if (annotation.coordinate.longitude < minLng) {
+            minLng = annotation.coordinate.longitude;
+        }
+    }];
+    MKCoordinateSpan coordinateSpan = MKCoordinateSpanMake(maxLat - minLat+0.01, maxLng - minLng+0.01);
+    CLLocationCoordinate2D centerCoordinate = CLLocationCoordinate2DMake((minLat+maxLat)/2.0f, (minLng + maxLng)/2.0f);
+    MKCoordinateRegion region = MKCoordinateRegionMake(centerCoordinate, coordinateSpan);
+    MKCoordinateRegion fittedRegion = [self regionThatFits:region];
+    [self setRegion:fittedRegion animated:YES];
+}
+
 @end
