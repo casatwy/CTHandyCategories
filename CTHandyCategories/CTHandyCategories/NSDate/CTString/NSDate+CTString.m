@@ -10,7 +10,7 @@
 
 @implementation NSDate (CTString)
 
-- (NSString *)stringWithyyyy_MM_dd_HH_mm_ss
+- (NSString *)ct_stringWithyyyy_MM_dd_HH_mm_ss
 {
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     dateFormatter.dateFormat = @"yyyy-MM-dd HH:mm:ss";

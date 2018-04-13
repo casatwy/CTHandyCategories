@@ -10,7 +10,7 @@
 
 @interface MKMapView (Annotation)
 
-- (void)showAnnotation:(id<MKAnnotation>)annotation atPoint:(CGPoint)point animated:(BOOL)animated;
-- (void)showRegionThatFitsAnnotations:(NSArray <id<MKAnnotation>> *)annotationList;
+- (void)ct_showAnnotation:(id<MKAnnotation>)annotation atPoint:(CGPoint)point animated:(BOOL)animated;
+- (void)ct_showRegionThatFitsAnnotations:(NSArray <id<MKAnnotation>> *)annotationList animated:(BOOL)animated;
 
 @end

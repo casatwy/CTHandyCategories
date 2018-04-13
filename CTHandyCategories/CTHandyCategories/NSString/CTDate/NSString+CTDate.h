@@ -10,6 +10,6 @@
 
 @interface NSString (CTDate)
 
-- (NSDate *)dateFromRFC3339;
+- (NSDate *)ct_dateFromRFC3339;
 
 @end

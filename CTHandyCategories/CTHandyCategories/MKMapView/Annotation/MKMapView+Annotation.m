@@ -12,7 +12,7 @@
 
 @implementation MKMapView (Annotation)
 
-- (void)showAnnotation:(id<MKAnnotation>)annotation atPoint:(CGPoint)point animated:(BOOL)animated
+- (void)ct_showAnnotation:(id<MKAnnotation>)annotation atPoint:(CGPoint)point animated:(BOOL)animated
 {
     CGPoint annotationPoint = [self convertCoordinate:annotation.coordinate toPointToView:self];
     CGPoint centerPoint = CGPointMake(annotationPoint.x, annotationPoint.y + (self.ct_centerY - point.y));
@@ -20,8 +20,16 @@
     [self setCenterCoordinate:centerCoordinate animated:animated];
 }
 
-- (void)showRegionThatFitsAnnotations:(NSArray<id<MKAnnotation>> *)annotationList
+- (void)ct_showRegionThatFitsAnnotations:(NSArray<id<MKAnnotation>> *)annotationList animated:(BOOL)animated
 {
+    if (annotationList.count == 0) {
+        return;
+    }
+    
+    if (annotationList.count == 1) {
+        [self setCenterCoordinate:annotationList.firstObject.coordinate animated:YES];
+    }
+    
     __block CGFloat minLat = CGFLOAT_MAX;
     __block CGFloat maxLat = CGFLOAT_MIN;
     __block CGFloat minLng = CGFLOAT_MAX;
@@ -45,7 +53,7 @@
     CLLocationCoordinate2D centerCoordinate = CLLocationCoordinate2DMake((minLat+maxLat)/2.0f, (minLng + maxLng)/2.0f);
     MKCoordinateRegion region = MKCoordinateRegionMake(centerCoordinate, coordinateSpan);
     MKCoordinateRegion fittedRegion = [self regionThatFits:region];
-    [self setRegion:fittedRegion animated:YES];
+    [self setRegion:fittedRegion animated:animated];
 }
 
 @end

@@ -10,6 +10,6 @@
 
 @interface NSDate (CTString)
 
-- (NSString *)stringWithyyyy_MM_dd_HH_mm_ss;
+- (NSString *)ct_stringWithyyyy_MM_dd_HH_mm_ss;
 
 @end

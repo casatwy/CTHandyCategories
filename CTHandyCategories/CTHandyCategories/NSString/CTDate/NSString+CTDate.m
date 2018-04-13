@@ -10,7 +10,7 @@
 
 @implementation NSString (CTDate)
 
-- (NSDate *)dateFromRFC3339
+- (NSDate *)ct_dateFromRFC3339
 {
     NSDateFormatter *rfc3339DateFormatter = [[NSDateFormatter alloc] init];
     rfc3339DateFormatter.dateFormat = @"yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSxxx";
