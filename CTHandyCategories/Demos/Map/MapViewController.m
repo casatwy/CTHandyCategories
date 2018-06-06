@@ -46,7 +46,7 @@
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-    [self.mapview showAnnotation:self.annotation atPoint:self.point animated:YES];
+    [self.mapview ct_showAnnotation:self.annotation atPoint:self.point animated:YES];
 }
 
 #pragma mark - MKMapViewDelegate
