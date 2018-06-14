@@ -30,6 +30,7 @@
                                                                     handler(action, idx);
                                                                 }
                                                             }];
+        alertAction.accessibilityLabel = actionTitle;
         [alertController addAction:alertAction];
     }];
     
@@ -62,6 +63,7 @@
                                                                handler(action, alertController, idx);
                                                            }
                                                        }];
+        action.accessibilityLabel = actionTitle;
         [alertController addAction:action];
     }];
 
